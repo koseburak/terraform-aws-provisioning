@@ -23,7 +23,7 @@ resource "aws_instance" "linux" {
     }
 
     volume_tags =  {
-        Name        = "${aws_efs_file_system.dev.name}"
+        Name        = "${aws_efs_file_system.dev.creation_token}"
     }
 }
 
