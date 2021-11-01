@@ -21,32 +21,32 @@ This project provide to creation the VPC (Virtual Private Cloud) on AWS using Te
 
 It's building;
 
-* **Virtual Private Cloud**
-  > Virtual Private Cloud is created that your infrastructure will use
+* **Virtual Private Cloud**\
+    Virtual Private Cloud is created that your infrastructure will use
 
-* **Elastic File System (EFS)**
-  > NFS file system is created for use with EC2 Instances \
-    Mount target is created in each Availability Zone to mount from EC2 Instances
+* **Elastic File System (EFS)**  
+  * NFS file system is created for use with EC2 Instances
+  * Mount target is created in each Availability Zone to mount from EC2 Instances
 
-* **Subnet**
-  > Subnet is created for each Availability Zone an IP range in VPC
+* **Subnet**\
+  Subnet is created for each Availability Zone an IP range in VPC
 
-* **Internet Gateway**
-  > Internet Gateway is created to provide the communication between VPC and Internet
+* **Internet Gateway**\
+  Internet Gateway is created to provide the communication between VPC and Internet
 
-* **Security Group**
-  > Security Group is created to define and manage Inbound/Outbound access of servers as a virtual firewall \
-    Ingress: \
-      - Define the limited SSH access from the specific source IP address \
-      - Define the NFS access to mount Elastic File System storage \
-    Egress: \
-      - Define All traffic access for Instances using this Security Group
+* **Security Group**\
+  Security Group is created to define and manage Inbound/Outbound access of servers as a virtual firewall
+  * Ingress:
+    * Define the limited SSH access from the specific source IP address \
+    * Define the NFS access to mount Elastic File System storage \
+  * Egress:
+    * Define All traffic access for Instances using this Security Group
 
-* **Route Table**
-  > Route Table is created to will be determine where network traffic from your subnet or gateway is directed
+* **Route Table**\
+  Route Table is created to will be determine where network traffic from your subnet or gateway is directed
 
-* **EC2 Instance**
-  > At least one EC2 Instance is created in each availability zone to provide service.
+* **EC2 Instance**\
+  At least one EC2 Instance is created in each availability zone to provide service.
 
 ![aws-vpc-diagram](assets/terraform-aws-vpc-diagram.png)
 </br>
